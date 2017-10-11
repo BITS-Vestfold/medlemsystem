@@ -2,8 +2,10 @@
 
 #### Innloggingsysstem for medlemmer
 * Kan selv endre egen informasjon
-* Krever minimum to brukernivåer (user/admin)
+* Eget brukernivå i databasen som sjekkes ved innlogging
 * "min side/profil"
   * Avatar?
-  * Sende passord på epost før det blir satt, tvinge bruker til å bytte ved første innlogging?
-  * En del av et login-system som må bygges med en gang, så skal planlegges i egen seksjon
+  * En del av et login-system som må bygges med en gang, planlegges i egen fil
+  * Funksjonalitet for å endre passord
+
+Siden blir i utformet på samme måte som administratorpanelet, bare da med tilgang til andre funksjoner.
