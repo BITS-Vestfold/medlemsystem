@@ -25,13 +25,16 @@ og stopper programmet ved feil input fra brukeren
 #### Client-side validering og hjelp (JavaScript)
 * Vise hjelpemeldinger ved entry inn i og hover over felter
   * Som for eksempel hvilke felter som er påkrevd, og hvilke som ikke er det
+    * Like dumt å bruke JS til å passe på at brukeren skriver inn riktig info  
+      Men validering som sikring mot angrep gjøres kun server-side
+
+#### Midlertidig online-side
+  * Siden blir satt opp på en midlertidig VPS under første stadiet av utviklingen
+    * Login-info kommer senere, shelltilgang kan selvfølgelig ordnes om ønskelig
+    * Ellers brukes SCP for filoverføring (støttes av winscp/filezilla/putty ol.)
+
 ---
 * Senere utvide med:
   * "Anti brute force"-funksjonalitet
   * "Glemt passord"-funksjon
     * Det er kun admin i begynnelsen
-
-#### Midlertidig online-side
-* Siden blir satt opp på en midlertidig VPS under første stadiet av utviklingen
-  * Login-info kommer senere, shelltilgang kan selvfølgelig ordnes om ønskelig
-  * Ellers brukes SCP for filoverføring (støttes av winscp/filezilla/putty ol.)
