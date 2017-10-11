@@ -1,7 +1,7 @@
 <?php
 // session_start();
 // Plass for å inkludere filer som trengs for loginfunksjoner mm.
-include("dbTilkobling.php"); // Fil som har informasjon om, og oppretter kobling til, databasen.
+include("dbtilkobling.php"); // Fil som har informasjon om, og oppretter kobling til, databasen.
 // Plass for å definere enkelte variabler som skal være tilgjengelige uansett underside.
 ?>
 <!DOCTYPE html>
