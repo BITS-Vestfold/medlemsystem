@@ -1,5 +1,5 @@
 ## Kravspesifikasjon til registreringssystem
-### Første utkast
+
 ### Hosting av site
 * Vi kan velge både PHP5 og PHP7 via kontrollpanel
 * Tilgang på en MySQL-konto (sannsynlig den MySQL-kompatible MariaDB)
@@ -37,34 +37,14 @@
 * Undersider opprettes ved en switch-statement i index.php som inkluderer undersider i egne filer,  
 basert på noe ala $_GET[funksjon=registrer_nytt_medlem]_
 
-### Databaseplanlegging
-##### Felter (* påkrevd i applikasjonen):
-* AI (AutoIncrement), primary key
-  * E-post kunne vært brukt som PK, men vi ønsker muligheten til at e-post kan endres
-* Fornavn*
-* Etternavn*
-* Studentnummer
-* E-post*
-* Telefonnummer
-* Adresse
-* Fakultet* (to IT-linjer, som tilhører forskjellige fakultet - mulig lite fremtidsrettet?)
-  * Årskull*
----
-* Brukernivå (INT 1), 0 for standard, 1 for admin - i første omgang
-  * Dette for å legge til rette for innlogging for medlemmer, som implementeres på sikt
-* Verifisert bruker via epost
-* Betalt semesteravgift
-* Registreringsdato (timestamp, unixtid)
-* Sist innlogget (blir ikke brukt inntil vi implementerer login-system for medlemmer)
-* Midlertidig utestengt (timestamp) (forhindring av brute force; sette regler for antall feilet loginforsøk)
-
 ### Fremdriftsplan
 * Siden blir satt opp på en midlertidig VPS under første stadiet av utviklingen
   * Login-info kommer senere, shelltilgang kan selvfølgelig ordnes om ønskelig
   * Ellers brukes SCP for filoverføring (støttes av winscp/filezilla/putty ol.)
 
+### Fremtidig funksjonalitet
 
-#### Innloggingsysstem for medlemmer?
+#### Innloggingsysstem for medlemmer
 * Kan selv endre egen informasjon
 * Krever minimum to brukernivåer (user/admin)
 * "min side/profil"
@@ -72,3 +52,4 @@ basert på noe ala $_GET[funksjon=registrer_nytt_medlem]_
 * Innebærer også passordhåndtering (password_hash()) for alle brukere
   * Krav til passordkompleksitet
   * Sende passord på epost før det blir satt, tvinge bruker til å bytte ved første innlogging?
+  * En del av et login-system som må bygges med en gang, så skal planlegges i egen seksjon
