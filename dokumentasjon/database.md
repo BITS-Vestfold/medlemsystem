@@ -22,6 +22,7 @@
   * Årskull* INT(4)
   * BetSemesteravgift BOOLEAN
   * RegTidspunkt (TIMESTAMP)
+  * Bildesti VARCHAR(128)
   ---
 ##### tabell - logininfo
   * BrukerNr PK, FK -> medlemmer.BrukerID
