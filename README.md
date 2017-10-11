@@ -42,15 +42,3 @@ basert på noe ala $_GET[funksjon=registrer_nytt_medlem]
 * Siden blir satt opp på en midlertidig VPS under første stadiet av utviklingen
   * Login-info kommer senere, shelltilgang kan selvfølgelig ordnes om ønskelig
   * Ellers brukes SCP for filoverføring (støttes av winscp/filezilla/putty ol.)
-
-### Fremtidig funksjonalitet
-
-#### Innloggingsysstem for medlemmer
-* Kan selv endre egen informasjon
-* Krever minimum to brukernivåer (user/admin)
-* "min side/profil"
-  * Avatar?
-* Innebærer også passordhåndtering (password_hash()) for alle brukere
-  * Krav til passordkompleksitet
-  * Sende passord på epost før det blir satt, tvinge bruker til å bytte ved første innlogging?
-  * En del av et login-system som må bygges med en gang, så skal planlegges i egen seksjon
