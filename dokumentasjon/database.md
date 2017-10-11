@@ -20,7 +20,7 @@
     * Basert på fakultet vet vi hvilke IT-linje studenten går pga det kun er to linjer per i dag
       * Mulig lite fremtidsrettet
   * Årskull* INT(4)
-  * Betalt semesteravgift BOOLEAN
+  * BetSemesteravgift BOOLEAN
   * RegTidspunkt (TIMESTAMP)
   ---
 ##### tabell - logininfo
