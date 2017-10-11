@@ -1,5 +1,9 @@
 ### Fremtidig funksjonalitet
 
+#### Konfigurasjon
+* Helst bruke XML til konfigurasjon på sikt, da i egen fil
+  * JSON er et helt greit alternativ som håndteres rimelig likt i PHP
+
 #### Innloggingsysstem for medlemmer
 * Kan selv endre egen informasjon
 * Eget brukernivå i databasen som sjekkes ved innlogging
