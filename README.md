@@ -7,7 +7,8 @@
   * Med andre ord, vi bruker den lokale SMTP-serveren, og slipper eksterne biblioteker
 
 #### Tekst på siden && frontend-team
-* Frontend-team står for tekst og til en viss grad innhold på sidene
+* Frontend-team står for tekst og innhold, men forms, enkel nav ol. lages ferdig
+  * Det lages en svært enkel utgave med lite css, men legger opp til at systemet enkelt kan taes over for styling
   * I første omgang opprettes HTML-tabeller for utskrift, for eks. basert på XSL fra XML-eksport
 * Programmet lages med en dokumentert navnkonvensjoner
   * Bruker konsekvent god semantikk i funksjonsnavn, variabelnavn ol, forenkler jobben med å ta over
