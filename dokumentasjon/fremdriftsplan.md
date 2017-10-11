@@ -6,16 +6,25 @@
   når utestengelsestiden er oppnådd.
 
 #### index.php og oppstart
-  * Lage index.php med switch-statement som inkluderer alle de forskjellige undersidene systemet skal ha
-    * Lage en full HTML validerbar side som inkluderer en underside med bare simpel tekst først.
-    * Lage en enkel navbar for tilgang til disse sidene
-  * Opprette skall for alle filer, med beskrivende filnavn for enkelt å forstå formålet med filen
-  * Raskt legge plan for navn på funksjoner i innloggingssystemet, dermed kan det legges til  
+* Lage index.php med switch-statement som inkluderer alle de forskjellige undersidene systemet skal ha
+  * Lage en full HTML validerbar side som inkluderer en underside med bare simpel tekst først.
+  * Lage en enkel navbar for tilgang til disse sidene
+* Opprette skall for alle filer, med beskrivende filnavn for enkelt å forstå formålet med filen
+* Raskt legge plan for navn på funksjoner i innloggingssystemet, dermed kan det legges til  
     sjekker på toppen av alle filer, som redirecter til innloggingsside om brukeren ikke er innlogget.
-  * Når det skal inkluderes mye ren HTML, så kodes det med HEREDOC/NOWDOC etter hva som passer best.
-    * Lagres i egen fil, og inkluderes via php. Dette gir rom for enkel endring på store deler
+* Når det skal inkluderes mye ren HTML, så kodes det med HEREDOC/NOWDOC etter hva som passer best.
+  * Lagres i egen fil, og inkluderes via php. Dette gir rom for enkel endring på store deler
     av HTML-en uten å nødvendigvis ødelegge for hele programmet. (Navn må opprettholdes osv.)
 
+#### Server-side validering (PHP)
+* Systemet bruker PHP til all validering av data inntastet av en bruker,  
+og stopper programmet ved feil input fra brukeren
+  * Dette gjelder også sikkerhetsaspektene som sikring mot SQL-injection
+* Alle felter skal ha validering i PHP/server-side.
+
+#### Client-side validering og hjelp (JavaScript)
+* Vise hjelpemeldinger ved entry inn i og hover over felter
+  * Som for eksempel hvilke felter som er påkrevd, og hvilke som ikke er det
 ---
 * Senere utvide med:
   * "Anti brute force"-funksjonalitet
