@@ -2,7 +2,7 @@
 
 ### Hosting av site
 * Vi kan velge både PHP5 og PHP7 via kontrollpanel
-* Tilgang på en MySQL/MariaDB-konto 
+* Tilgang på en MySQL/MariaDB-konto
 * E-post er knyttet til samme leverandør, så vi antar at vi kan sende e-post via mail()
   * Med andre ord, vi bruker den lokale SMTP-serveren, og slipper eksterne biblioteker
 
@@ -36,9 +36,4 @@
   * password_hash() i PHP for passord-beskyttelse
 * Mulighet for å sjekke om medlem har betalt kontigent
 * Undersider opprettes ved en switch-statement i index.php som inkluderer undersider i egne filer,  
-basert på noe ala $_GET[funksjon=registrer_nytt_medlem]
-
-### Fremdriftsplan
-* Siden blir satt opp på en midlertidig VPS under første stadiet av utviklingen
-  * Login-info kommer senere, shelltilgang kan selvfølgelig ordnes om ønskelig
-  * Ellers brukes SCP for filoverføring (støttes av winscp/filezilla/putty ol.)
+basert på noe ala $\_GET[funksjon=registrer_nytt_medlem]
