@@ -36,7 +36,7 @@
   * password_hash() i PHP for passord-beskyttelse
 * Mulighet for å sjekke om medlem har betalt kontigent
 * Undersider opprettes ved en switch-statement i index.php som inkluderer undersider i egne filer,  
-basert på noe ala $_GET[funksjon=registrer_nytt_medlem]_
+basert på noe ala $_GET[funksjon=registrer_nytt_medlem]
 
 ### Fremdriftsplan
 * Siden blir satt opp på en midlertidig VPS under første stadiet av utviklingen
