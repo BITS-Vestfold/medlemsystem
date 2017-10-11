@@ -2,7 +2,7 @@
 
 ### Hosting av site
 * Vi kan velge både PHP5 og PHP7 via kontrollpanel
-* Tilgang på en MySQL-konto (sannsynlig den MySQL-kompatible MariaDB)
+* Tilgang på en MySQL/MariaDB-konto 
 * E-post er knyttet til samme leverandør, så vi antar at vi kan sende e-post via mail()
   * Med andre ord, vi bruker den lokale SMTP-serveren, og slipper eksterne biblioteker
 
