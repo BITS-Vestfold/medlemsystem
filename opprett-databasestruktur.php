@@ -38,7 +38,7 @@ $sql = "CREATE TABLE medlem (
   adresse VARCHAR(196),
   fakultet VARCHAR(32) NOT NULL,
   aarskull INT(4)
-  betaltsemestavgift BOOLEAN NOT NULL,
+  betaltsemestavgift INT(1) NOT NULL,
   registreringstid INT(20) NOT NULL,
   bildesti VARCHAR(128),
   brukergruppe INT(1),
