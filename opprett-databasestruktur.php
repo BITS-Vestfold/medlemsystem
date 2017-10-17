@@ -28,7 +28,7 @@ if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilme
 }
 
 $sql = "CREATE TABLE medlem (
-  brukerid INT(6), PRIMARY KEY AUTO_INCREMENT,
+  brukerid INT(6) PRIMARY KEY AUTO_INCREMENT,
   fornavn VARCHAR(32) NOT NULL,
   etternavn VARCHAR(64) NOT NULL,
   brukernavn VARCHAR(32) NOT NULL,
