@@ -1,8 +1,9 @@
 <?php
 // session_start();
 // Plass for å inkludere filer som trengs for loginfunksjoner mm.
-include("dbtilkobling.php"); // Fil som har informasjon om, og oppretter kobling til, databasen.
+include 'dbtilkobling.php'; // Fil som har informasjon om, og oppretter kobling til, databasen.
 // Plass for å definere enkelte variabler som skal være tilgjengelige uansett underside.
+include 'funksjoner/print_navbar.php';
 ?>
 <!DOCTYPE html>
 <html lang="no">
@@ -19,19 +20,21 @@ include("dbtilkobling.php"); // Fil som har informasjon om, og oppretter kobling
   <!-- jQuery må være med av diverse grunner (BS++) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
   <link href="css/jquery-ui.css" rel="stylesheet">
   <link href="css/jquery-ui.theme.css" rel="stylesheet">
 
 </head>
 <body>
-  <!-- TODO: sette inn enkel navbar med korrekte liker, samt ID-er og klasser -->
   <div class="container">
     <?php
-      include("switchfunksjon.php");
+      printNav();
+      //include("switchfunksjon.php");
         // Inkluderer switch-statementet i egen filer
       $dbLink->close();
         // Lukker koblingen til databasen som ble opprettet i inkludert fil over.
     ?>
   </div>
+<!-- JavaScript-filer bør inkluderes i bunnen for raskere lasting av siden. Gotta love that UX! -->
 </body>
 </html>
