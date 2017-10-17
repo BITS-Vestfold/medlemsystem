@@ -3,6 +3,7 @@
 ### Det som går live/blir testet ligger ute på http://prg.ninja
 * Blir manuelt oppdatert, så kan ligge et stykke bak repo'n.
 * Databasen er opprettet, tilgang til PMA/shell(bash) kan fåes for de som ønsker det.
+* Databasestrukturen er også synlig i PHP-filene for opprettelse av tabeller.
 
 #### Hosting av site
 * Vi kan velge både PHP5 og PHP7 via kontrollpanel
