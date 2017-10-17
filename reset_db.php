@@ -1,5 +1,5 @@
 <?php
-  include 'include/dbtilkobling.php';
+  include_once 'include/dbtilkobling.php';
 
   $sql = "DROP TABLE `admin`, `gruppe`, `medlem`;";
   $dbLink->query($sql); // Alt databaseinnhold relatert til systemet skal nå være slettet

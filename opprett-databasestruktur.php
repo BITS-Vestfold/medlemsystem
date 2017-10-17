@@ -1,6 +1,6 @@
 <?php
 
-include 'include/dbtilkobling.php';
+include_once 'include/dbtilkobling.php';
 
 $sql = "CREATE TABLE admin (
   adminid INT(3) PRIMARY KEY AUTO_INCREMENT,
@@ -12,7 +12,7 @@ $sql = "CREATE TABLE admin (
 );";
 
 if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilmeldinger vi måtte få.
-  print("Great success! Tabellen \"admin\"ble opprettet i databasen.\n<br>");
+  print("Great success! Tabellen \"admin\" ble opprettet i databasen.\n<br>");
 } else { // Ev. feilmelding blir skrevet ut. Vanlig feil her er at tabellen allerede eksisterer.
   die("Kritisk feil: Noe gikk galt ved registrering av tabell! Feil fra DBMS:" . mysqli_error($dbLink) . "<br>");
 }
@@ -24,7 +24,7 @@ $sql = "CREATE TABLE gruppe (
 );";
 
 if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilmeldinger vi måtte få.
-  print("Great success! Tabellen \"gruppe\"ble opprettet i databasen.\n<br>");
+  print("Great success! Tabellen \"gruppe\" ble opprettet i databasen.\n<br>");
 } else { // Ev. feilmelding blir skrevet ut. Vanlig feil her er at tabellen allerede eksisterer.
   die("Kritisk feil: Noe gikk galt ved registrering av tabell og databasen er kun delvis opprettet.\nFeil fra DBMS:" . mysqli_error($dbLink) . "<br>");
 }
@@ -49,7 +49,7 @@ $sql = "CREATE TABLE medlem (
 );";
 
 if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilmeldinger vi måtte få.
-  print("Great success! Tabellen \"medlem\"ble opprettet i databasen.\n<br>");
+  print("Great success! Tabellen \"medlem\" ble opprettet i databasen.\n<br>");
 } else { // Ev. feilmelding blir skrevet ut. Vanlig feil her er at tabellen allerede eksisterer.
   die("Kritisk feil: Noe gikk galt ved registrering av tabell og databasen er kun delvis opprettet.\nFeil fra DBMS:" . mysqli_error($dbLink) . "<br>");
 }
