@@ -1,6 +1,7 @@
 <?php
+// [BYTT LOGIN-INFO]
 
-$tjener = "localhost";
+$tjener = "127.0.0.1";
 $brukernavn = "";
 $passord = "";
 $database = "";
