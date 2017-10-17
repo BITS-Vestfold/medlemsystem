@@ -16,7 +16,7 @@ if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilme
 }
 
 $sql = "CREATE TABLE gruppe (
-  gruppeid INT(1), PRIMARY KEY AUTO_INCREMENT,
+  gruppeid INT(1) PRIMARY KEY AUTO_INCREMENT,
   gruppenavn VARCHAR(32),
   tilgangsnivaa VARCHAR(64)
 );";
