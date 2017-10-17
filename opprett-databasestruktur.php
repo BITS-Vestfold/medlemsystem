@@ -4,7 +4,7 @@ include 'include/dbtilkobling.php';
 
 $sql = "CREATE TABLE admin (
   adminid INT(3) PRIMARY KEY AUTO_INCREMENT,
-  adminbrukernavn VARCHAR(32), NOT NULL
+  adminbrukernavn VARCHAR(32) NOT NULL,
   passord VARCHAR(255) NOT NULL,
   lastlogin TIMESTAMP NOT NULL
 );";
