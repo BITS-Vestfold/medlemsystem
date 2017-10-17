@@ -5,6 +5,13 @@
   * Tilpasse programmet en ny databasestruktur i fremtiden vil ikke by på store utfordringer, hvis det skulle være nødvendig, noe som nok er tvilsomt.
 
 #### Felter (* påkrevd i applikasjonen / NOT NULL i db):
+
+#### tabell - admin
+  * adminID INT, PK, AI
+  * adminbruker VARCHAR(32)
+  * passord VARCHAR(255)  -- tar her høyde for fremtidige hashingmetoder
+  * lastLogin TIMESTAMP
+
 ##### tabell - medlemmer
   * BrukerID, AI (AutoIncrement), primary key (PK)
     * Epost kunne vært brukt som PK, men vi ønsker muligheten til at e-post kan endres
@@ -25,7 +32,7 @@
   * RegTidspunkt (TIMESTAMP)
   * Bildesti VARCHAR(128)
   * Gruppe INT(1) PK -> gruppe->lvl
-    * Gruppe bestemmer tilgangsnivå mm.
+    * Gruppe bestemmer tilgangsnivå mm. på sikt
 ---
 ##### tabell - gruppe
   * GruppeID INT, PK
