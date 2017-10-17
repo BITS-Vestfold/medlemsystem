@@ -1,6 +1,10 @@
 ## Kravspesifikasjon til registreringssystem
 
-### Hosting av site
+### Det som går live/blir testet ligger ute på http://prg.ninja
+* Blir manuelt oppdatert, så kan ligge et stykke bak repo'n.
+* Databasen er opprettet, tilgang til PMA/shell(bash) kan fåes for de som ønsker det.
+
+#### Hosting av site
 * Vi kan velge både PHP5 og PHP7 via kontrollpanel
 * Tilgang på en MySQL/MariaDB-konto
 * E-post er knyttet til samme leverandør, så vi antar at vi kan sende e-post via mail()
