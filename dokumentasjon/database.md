@@ -10,6 +10,7 @@
     * Epost kunne vært brukt som PK, men vi ønsker muligheten til at e-post kan endres
   * Fornavn* VARCHAR(32)
   * Etternavn* VARCHAR(64)
+  * Brukernavn* VARCHAR(32)
   * Studentnummer INT(6)
   * Epost* VARCHAR(128)
     * Setter en høy verdi her grunnet dagens utvikling av .TLD-er
@@ -23,8 +24,16 @@
   * BetSemesteravgift BOOLEAN
   * RegTidspunkt (TIMESTAMP)
   * Bildesti VARCHAR(128)
+  * Gruppe INT(1) PK -> gruppe->lvl
+    * Gruppe bestemmer tilgangsnivå mm.
+---
+##### tabell - gruppe
+  * GruppeID INT, PK
+  * Gruppenavn
+  * Tilgangsniva
   ---
 ##### tabell - logininfo
+
   * BrukerNr PK, FK -> medlemmer.BrukerID
   * epost FK -> medlemmer.Epost
     * Bruker epost for innlogging
@@ -32,9 +41,6 @@
   * TvingPassordbytte BOOLEAN
     * Hvis brukeren har brukt "glemt passord", får vedkommende tilsendt et nytt passord via epost.
     Innloggingssystemet sjekker dette, og tvinger brukeren til å bytte passord ved neste innlogging.
-  * Brukerlvl INT(1)
-    * 0 for standard, 1 for admin - i første omgang
-    * Dette for å legge til rette for innlogging for medlemmer, som implementeres på sikt
   * Verifisert BOOLEAN
     * Verifisert bruker via epost
   * SistInnlogget (TIMESTAMP)
