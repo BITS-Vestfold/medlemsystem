@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dbkonfig>
+  <tjener>localhost</tjener>
+  <bruker>databasebruker</bruker>
+  <passord>klartekst sql-passord</passord>
+  <database>Navn på databasen</database>
+  <charset>utf-8</charset>
+</dbkonfig>
