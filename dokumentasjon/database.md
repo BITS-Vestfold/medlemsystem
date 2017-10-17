@@ -12,7 +12,7 @@
   * passord VARCHAR(255)  -- tar her høyde for fremtidige hashingmetoder
   * lastLogin TIMESTAMP
 
-##### tabell - medlemmer
+##### tabell - medlem
   * BrukerID, AI (AutoIncrement), primary key (PK)
     * Epost kunne vært brukt som PK, men vi ønsker muligheten til at e-post kan endres
   * Fornavn* VARCHAR(32)
