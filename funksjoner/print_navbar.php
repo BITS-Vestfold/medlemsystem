@@ -16,7 +16,7 @@ echo <<<'navbarHTML'
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php">skoleAdmin v1.0</a>
+        <a class="navbar-brand" href="index.php">BITS - medlemsregister</a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="navbar1-collapse">
