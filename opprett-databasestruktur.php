@@ -1,6 +1,6 @@
 <?php
 
-include_once 'include/dbtilkobling.php';
+include_once('include/dbtilkobling.php');
 
 $sql = "CREATE TABLE admin (
   adminid INT(3) PRIMARY KEY AUTO_INCREMENT,
