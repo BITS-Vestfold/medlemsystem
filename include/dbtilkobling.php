@@ -1,13 +1,14 @@
 <?php
-include_once('../innlogging/login.php');
-sjekkInnlogget(1);
+//include_once('../innlogging/login.php');
+//sjekkInnlogget(1);
+
 // [BYTT LOGIN-INFO VED FLYTTING]
 // Tilpasset mildertidig utviklings-VPS
 
 $tjener = "127.0.0.1";
-$brukernavn = "bitssys";
+$brukernavn = "bits";
 $passord = "nKl178l";
-$database = "bits";
+$database = "bitssys";
 
 $dbLink = new mysqli($tjener, $brukernavn, $passord, $database);
 // Vi oppretter objektet $dbLink som en kobling mot sql-serveren
