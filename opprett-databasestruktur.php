@@ -8,7 +8,7 @@ $sql = "CREATE TABLE admin (
   passord VARCHAR(255) NOT NULL,
   adminepost VARCHAR(128),
   lastlogin TIMESTAMP NOT NULL,
-  opprettettid INT(20) NOT NULL
+  laget_timestamp INT(20) NOT NULL
 );";
 
 if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilmeldinger vi måtte få.

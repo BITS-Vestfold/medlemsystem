@@ -21,5 +21,4 @@ function sjekkInnlogget() {
     return true;
   }
 }
-
 ?>
