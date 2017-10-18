@@ -6,7 +6,7 @@ function sjekkInnlogget() {
   // for innlogget bruker er lik som er påkrevd for den aktuelle siden
 
   // Setter opp en sti, men vil ha en endret utgave der den henter sti fra for eks $_SERVER
-  $sti = '/medlemsystem/';
+  $sti = '/';
 
   if (!isset($_SESSION["loggetinn"]) && !isset($_SESSION["bruker"]) ) {
     echo '<META HTTP-EQUIV=REFRESH CONTENT="3;' . $sti . 'innlogging/innlogging.php">';
