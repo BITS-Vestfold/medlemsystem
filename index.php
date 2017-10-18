@@ -1,9 +1,9 @@
 <?php
 // session_start();
 // Plass for å inkludere filer som trengs for loginfunksjoner mm.
-include 'dbtilkobling.php'; // Fil som har informasjon om, og oppretter kobling til, databasen.
+include_once 'dbtilkobling.php'; // Fil som har informasjon om, og oppretter kobling til, databasen.
 // Plass for å definere enkelte variabler som skal være tilgjengelige uansett underside.
-include 'funksjoner/print_navbar.php';
+include_once 'funksjoner/print_navbar.php';
 ?>
 <!DOCTYPE html>
 <html lang="no">
