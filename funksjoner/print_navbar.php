@@ -21,7 +21,6 @@ echo <<<'navbarHTML'
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="navbar1-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="index.php">Hjem</a></li>
 
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Registrering <span class="caret"></span></a>
@@ -33,7 +32,7 @@ echo <<<'navbarHTML'
               <li><a href="?funksjon=registrer_admin">Ny admin</a></li>
               <li role="separator" class="divider"></li>
 
-              <li><a href="#">Nytt rettighetsnivå</a></li>
+              <li><a href="index.php?funksjon=nytt_nivaa">Nytt rettighetsnivå</a></li>
             </ul>
           </li>
 
@@ -72,7 +71,7 @@ echo <<<'navbarHTML'
           </li>
 
           <!-- Enkeltknapper -->
-          <li><a href="index.php?funksjon=eksporter">Eksporter lister<a></li>
+          <li><a href="index.php?funksjon=eksporter">Eksporter lister</a></li>
           <li><a href="index.php?funksjon=sok">Søk</a></li>
           <li><a href="index.php?funksjon=logg_ut">Logg ut</a></li>
         </ul>
