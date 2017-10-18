@@ -1,9 +1,11 @@
 <?php
+include_once('dbtilkobling.php'); // Fil som har informasjon om, og oppretter kobling til, databasen.
+
 // session_start();
 // Plass for å inkludere filer som trengs for loginfunksjoner mm.
-include_once 'dbtilkobling.php'; // Fil som har informasjon om, og oppretter kobling til, databasen.
 // Plass for å definere enkelte variabler som skal være tilgjengelige uansett underside.
-include_once 'funksjoner/print_navbar.php';
+include_once('funksjoner/print_navbar.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="no">
@@ -31,9 +33,12 @@ include_once 'funksjoner/print_navbar.php';
 <body>
   <div class="container">
     <?php
+      // Funksjon som skriver ut en navbar, HTML i egen fil for enkel tilpassing
       printNav();
-      //include("switchfunksjon.php");
-        // Inkluderer switch-statementet i egen filer
+
+      // Inkluderer switch-statementet i egen fil for valg av funksjonalitet
+      include("switchfunksjon.php");
+
       $dbLink->close();
         // Lukker koblingen til databasen som ble opprettet i inkludert fil over.
     ?>
