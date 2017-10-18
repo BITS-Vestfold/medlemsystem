@@ -1,6 +1,6 @@
 <?php
-//include_once("loginsys/sjekk.php");
-//sjekkInnlogget("0"); // Brukernivå 0 påkreves (alle)
+//include_once('innlogging/login.php');
+//sjekkInnlogget(0);
 
 // Vi må bruke include_once i tilfelle noen kjører filene ved å skrive URL-en direkte i browseren.
 // De ville dermed passert alle inkluderinger gjort på et høyere nivå.
@@ -30,9 +30,6 @@ echo <<<'navbarHTML'
               <li role="separator" class="divider"></li>
 
               <li><a href="?funksjon=registrer_admin">Ny admin</a></li>
-              <li role="separator" class="divider"></li>
-
-              <li><a href="index.php?funksjon=nytt_nivaa">Nytt rettighetsnivå</a></li>
             </ul>
           </li>
 
@@ -71,7 +68,7 @@ echo <<<'navbarHTML'
           </li>
 
           <!-- Enkeltknapper -->
-          <li><a href="index.php?funksjon=eksporter">Eksporter lister</a></li>
+          <li><a href="index.php?funksjon=eksporter">Eksporter</a></li>
           <li><a href="index.php?funksjon=sok">Søk</a></li>
           <li><a href="index.php?funksjon=logg_ut">Logg ut</a></li>
         </ul>
