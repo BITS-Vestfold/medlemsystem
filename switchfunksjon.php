@@ -1,9 +1,4 @@
 <?php
-include_once('innlogging/login.php');
-session_start();
-sjekkInnlogget();
-
-var_dump($_SESSION);
 
 if (isset($_GET["funksjon"])) {
 
@@ -74,7 +69,6 @@ if (isset($_GET["funksjon"])) {
 
     default: // Inntreffer kun hvis man skriver inn URL manuelt og da med ?funksjon=noe_annet_enn_i_switchen
     print("Funksjonen du har valgt er ugyldig, vennligst bruk menyen over for å velge funksjon.");
-
   }
 } else { // Slutt på $GET_["funksjon"]
   include("forside.php"); // Skriv ut en standard forside siden ingen funksjon er valgt.
