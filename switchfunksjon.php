@@ -1,6 +1,9 @@
 <?php
 include_once('innlogging/login.php');
-sjekkInnlogget(1);
+session_start();
+sjekkInnlogget();
+
+var_dump($_SESSION);
 
 if (isset($_GET["funksjon"])) {
 
