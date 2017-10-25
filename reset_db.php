@@ -12,7 +12,7 @@
   include 'opprett-databasestruktur.php';   // Oppretter alle tabeller og felter
   $naatid = time();
   // Under oppretter vi administratorbrukeren
-  $admPassord = password_hash("adminPassord123", PASSWORD_DEFAULT);  // [BYTT PASSORD]
+  $admPassord = password_hash("adminP123", PASSWORD_DEFAULT);  // [BYTT PASSORD]
   $sql = "INSERT INTO admin (adminbrukernavn, passord, adminepost, laget_timestamp) VALUES ('admin','$admPassord','post@bits.forening',$naatid)" // Legg til def. admin
   or die("<div class=\"alert alert-danger\" role=\"alert\">Kunne ikke legge til default admin-bruker. Feil fra DBHS: " . $dbLink->error . "</div>");
 
