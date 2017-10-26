@@ -1,6 +1,9 @@
 <?php
   include_once('include/dbtilkobling.php');
-
+  include_once('innlogging/login.php');
+  session_start();
+  sjekkInnlogget(1);
+  
   $sql = "DROP TABLE `admin`;";
   $sql .= "DROP TABLE `medlem`;";
   $sql .= "DROP TABLE `gruppe`;";
