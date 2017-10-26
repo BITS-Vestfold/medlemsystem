@@ -1,11 +1,34 @@
 <?php
-//include_once('innlogging/login.php');
-//sjekkInnlogget(0);
 
-// Vi må bruke include_once i tilfelle noen kjører filene ved å skrive URL-en direkte i browseren.
-// De ville dermed passert alle inkluderinger gjort på et høyere nivå.
+// function printBrukerNav() {}
 
 function printNav() {
+echo <<<'navbarHTML'
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.php">BITS - medlemssystem</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar1-collapse">
+      <ul class="nav navbar-nav">
+          <!-- Enkeltknapper -->
+          <li><a href="innlogging/innlogging.php">Logg inn</a></li>
+          <li><a href="index.php?funksjon=bruker_reg">Registrer deg</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+navbarHTML;
+}
+
+function printAdminNav() {
 echo <<<'navbarHTML'
 <nav class="navbar navbar-default">
     <div class="container-fluid">
