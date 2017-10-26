@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once('dbtilkobling.php'); // Fil som har informasjon om, og oppretter kobling til, databasen.
 
 // session_start();
@@ -44,10 +45,18 @@ include_once('funksjoner/print_navbar.php');
   <div class="container">
     <?php
       // Funksjon som skriver ut en navbar, HTML i egen fil for enkel tilpassing
-      printNav();
-
+      if($_SESSION["brukerniva"] === "2") {
+        printAdminNav();
+      } else {
+        printNav();
+      }
       // Inkluderer switch-statementet i egen fil for valg av funksjonalitet
       include("switchfunksjon.php");
+
+      if($_SESSION) {
+        print("Session_dump under om innlogget: <br>\n");
+        var_dump($_SESSION);
+      }
 
       $dbLink->close();
         // Lukker koblingen til databasen som ble opprettet i inkludert fil over.
