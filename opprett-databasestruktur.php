@@ -1,13 +1,15 @@
 <?php
-
 include_once('include/dbtilkobling.php');
+include_once('innlogging/login.php');
+session_start();
+sjekkInnlogget(1);
 
 $sql = "CREATE TABLE admin (
   adminid INT(3) PRIMARY KEY AUTO_INCREMENT,
   adminbrukernavn VARCHAR(32) NOT NULL,
   passord VARCHAR(255) NOT NULL,
   adminepost VARCHAR(128),
-  lastlogin TIMESTAMP NOT NULL,
+  lastlogin TIMESTAMP,
   laget_timestamp INT(20) NOT NULL
 );";
 
@@ -20,7 +22,7 @@ if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilme
 $sql = "CREATE TABLE gruppe (
   gruppeid INT(1) PRIMARY KEY AUTO_INCREMENT,
   gruppenavn VARCHAR(32),
-  tilgangsnivaa VARCHAR(64)
+  tilgangsnivaa VARCHAR(6)
 );";
 
 if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilmeldinger vi måtte få.
@@ -30,7 +32,7 @@ if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilme
 }
 
 $sql = "CREATE TABLE medlem (
-  brukerid INT(6) PRIMARY KEY AUTO_INCREMENT,
+  brukerid INT(10) PRIMARY KEY AUTO_INCREMENT,
   fornavn VARCHAR(32) NOT NULL,
   etternavn VARCHAR(64) NOT NULL,
   brukernavn VARCHAR(32) NOT NULL,
@@ -38,14 +40,17 @@ $sql = "CREATE TABLE medlem (
   epost VARCHAR(128) NOT NULL,
   telefonnummer INT(8),
   adresse VARCHAR(196),
-  fakultet VARCHAR(32) NOT NULL,
+  fakultet VARCHAR(32),
   aarskull INT(4),
-  betaltkontigent INT(1) NOT NULL,
-  betalregdato DATE NOT NULL,
+  betaltkontigent INT(1),
+  kontigentbetalingstid DATE,
   registreringstid INT(20) NOT NULL,
   bildesti VARCHAR(128),
   brukergruppe INT(1),
-  FOREIGN KEY (brukergruppe) REFERENCES gruppe(gruppeid)
+  sistlogin TIMESTAMP,
+  FOREIGN KEY (brukergruppe) REFERENCES gruppe(gruppeid),
+  FOREIGN KEY (fakultet) REFERENCES tilhorighet(fakultet),
+  FOREIGN KEY (aarskull) REFERENCES tilhorighet(aarskull)
 );";
 
 if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilmeldinger vi måtte få.
@@ -53,5 +58,11 @@ if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilme
 } else { // Ev. feilmelding blir skrevet ut. Vanlig feil her er at tabellen allerede eksisterer.
   die("Kritisk feil: Noe gikk galt ved registrering av tabell og databasen er kun delvis opprettet.\nFeil fra DBMS:" . mysqli_error($dbLink) . "<br>");
 }
+
+$sql = "CREATE TABLE tilhorighet (
+  tilhorighetsid INT(4) PRIMARY KEY,
+  fakultet VARCHAR(32) NOT NULL,
+  aarskull INT(4) NOT NULL
+);";
 
 ?>
