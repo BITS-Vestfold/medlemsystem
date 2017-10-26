@@ -1,6 +1,8 @@
 <?php
 // Funksjonen under returnerer true hvis brukeren er logget inn, hvis ikke dreper den scriptet,
-// etter at den videresender brukeren til siden for innlogging.
+// etter at den videresender brukeren til siden for innlogging. Fremtidig skal den heller kjøre en try-catch-blokk og fange feilen,
+// for å så skrive ut feilmeldinger definert i en xml-fil.
+
 function sjekkInnlogget() {
   // Funksjonen er tenkt å ta imot et argument, som skal brukes til å vurdere brukernivået
   // for innlogget bruker er lik som er påkrevd for den aktuelle siden
