@@ -8,7 +8,7 @@ function sjekkInnlogget() {
   // Setter opp en sti, men vil ha en endret utgave der den henter sti fra for eks $_SERVER
   $sti = '/';
 
-  if (!isset($_SESSION["loggetinn"]) && !isset($_SESSION["bruker"]) ) {
+  if (!isset($_SESSION["loggetinn"]) && !isset($_SESSION["brnavn"]) ) {
     echo '<META HTTP-EQUIV=REFRESH CONTENT="3;' . $sti . 'innlogging/innlogging.php">';
     die("<div class=\"alert alert-danger\">Disse sidene er kun for innloggede brukere, <a href=\"login_sys/innlogging.php\">vennligst trykk her om du ikke blir videresendt.</a></div>");
     // For å sikre at brukeren ikke får se noe av sideinnholdet uten å være logget inn, dreper vi scriptet
