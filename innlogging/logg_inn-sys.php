@@ -18,6 +18,7 @@ function sjekkLogin($brukernavn, $passord, $dbConn) {
     // setter vi $_SESSION-variabler som gjenspeiler dette.
     $_SESSION["brnavn"] = "$brukernavn";
     $_SESSION["loggetinn"] = "1";
+    $_SESSION["brukerniva"] = "2";  // administratornivå, alle innloggede er admins enn så lenge
 
     // Midlertidig blir sikkerhetenssjekken kun basert på session-variabler.
     // Det bør og kan legges på flere lag med sikring.

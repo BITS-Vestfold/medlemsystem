@@ -65,7 +65,7 @@
 </html>
 <?php
 if (isset($_POST["sendLogin"])) {
-  include_once('sys-funksjoner.php');
+  include_once('logg_inn-sys.php');
   include_once('../include/dbtilkobling.php'); // Gir oss tilgang til MySQL-databasen via koblingsobjektet $dbLink (MySQLi)
 
   session_start();
