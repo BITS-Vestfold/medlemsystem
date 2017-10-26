@@ -63,6 +63,10 @@ if (isset($_GET["funksjon"])) {
     include("dbsok.php");
     break;
 
+    case "bruker_reg":
+    include("medlemsregistrering.php");
+    break;
+
     case "logg_ut":
     include("innlogging/logg_ut.php");
     break;
