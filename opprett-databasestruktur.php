@@ -49,8 +49,7 @@ $sql = "CREATE TABLE medlem (
   brukergruppe INT(1),
   sistlogin TIMESTAMP,
   FOREIGN KEY (brukergruppe) REFERENCES gruppe(gruppeid),
-  FOREIGN KEY (fakultet) REFERENCES tilhorighet(fakultet),
-  FOREIGN KEY (aarskull) REFERENCES tilhorighet(aarskull)
+  FOREIGN KEY (kullid) REFERENCES tilhorighet(kullid)
 );";
 
 if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilmeldinger vi måtte få.
@@ -60,9 +59,15 @@ if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilme
 }
 
 $sql = "CREATE TABLE tilhorighet (
-  tilhorighetsid INT(4) PRIMARY KEY,
+  kullid INT(4) AUTO_INCREMENT PRIMARY KEY,
   fakultet VARCHAR(32) NOT NULL,
   aarskull INT(4) NOT NULL
 );";
+
+if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilmeldinger vi måtte få.
+  print("Great success! Tabellen \"tilhorighet\" ble opprettet i databasen.\n<br>");
+} else { // Ev. feilmelding blir skrevet ut. Vanlig feil her er at tabellen allerede eksisterer.
+  die("Kritisk feil: Noe gikk galt ved registrering av tabell og databasen er kun delvis opprettet.\nFeil fra DBMS:" . mysqli_error($dbLink) . "<br>");
+}
 
 ?>
