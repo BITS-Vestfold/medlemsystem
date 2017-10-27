@@ -19,8 +19,8 @@ if (isset($_GET["funksjon"])) {
     include("reg_ny_admin.php");
     break;
 
-    case "nytt_nivaa":
-    include("reg_nytt_brukernivaa.php");
+    case "registrer_fakultet":
+    include("reg_fakultetvalg.php");
     break;
 
     case "vis_alle_medlemmer":
