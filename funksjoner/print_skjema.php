@@ -87,4 +87,33 @@ echo <<<'regskjemaHTML'
 </form>
 regskjemaHTML;
 }
+
+function skrivRegFakultetSkjema() {
+echo<<<'regfakultetHTML'
+<h3>Registrer nye valg for fakultet og/eller årskull</h3>
+<h5>Det man legger inn her kommer som valg i dropdown-menyer på skjema for medlemsregistrering</h5>
+<form id="skjemaRegFakultet" name="skjemaregfakultet" method="POST" class="well">
+  <label for="fakultet">Legg til nytt fakultet:</label>
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
+      <input type="text" class="form-control" placeholder="Institutt for nytenking og ..." name="regnyttfakultet" id="regFakultet">
+    </div>
+  </div>
+
+  <label for="fakultet">Legg til årskull-valg: </label>
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+      <input type="text" class="form-control" placeholder="2018" name="regnyttaarskullvalg" id="regNyttAarskullValg">
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-success" name="regfakultetsubmit" id="regFakultetSubmit">Registrer innformasjonen</button>
+  <button type="reset" class="btn btn-warning" name="nullstillfakultetskjema" id="regFakultetNullstillSkjema">Tilbakestill skjemaet</button>
+</form>
+regfakultetHTML;
+// Tanken er at fakultet avslører hvilken IT-linje man går, men for fremtidens del er det lagt inn mulighet for flere fakultet.
+// Fakultet kan enkelt nok omgjøres til studielinje eller lignende
+}
 ?>
