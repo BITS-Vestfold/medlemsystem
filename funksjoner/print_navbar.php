@@ -52,6 +52,9 @@ echo <<<'navbarHTML'
               <li><a href="index.php?funksjon=registrer_medlem">Nytt medlem</a></li>
               <li role="separator" class="divider"></li>
 
+              <li><a href="index.php?funksjon=registrer_fakultet">Nytt fakultet eller årskull</a></li>
+              <li role="separator" class="divider"></li>
+
               <li><a href="?funksjon=registrer_admin">Ny admin</a></li>
             </ul>
           </li>
