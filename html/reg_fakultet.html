@@ -5,25 +5,10 @@
       <div class="form-group">
         <label for="regFakultetFelt">Skriv inn navn på nytt fakultet</label>
         <input type="text" class="form-control" id="regFakultetFelt" name="regfakultetfelt" placeholder="Skriv inn navn på nytt fakultet">
-        <span id="bildeNrHjelp" class="help-block"><i>Bildenummeret må være konstruert av tre siffer, for eks 128 og 512.</i></span>
+        <span id="hjelpetekstFakultet" class="help-block"><i>Denne brukes bare om det skulle opprettes et nytt fakultet med studielinje innen IT ved camp. Vestfold</i></span>
       </div>
 
-      <div class="form-group">
-        <label for="skjemaBildeBeskrivelse">Beskrivelse:</label>
-        <input type="text" class="form-control" id="skjemaBildeBeskrivelse" name="skjemaBildeBeskrivelse" placeholder="En kort beskrivelse av bildet.">
-        <span id="bildeBeskrivHjelp" class="help-block"><i>Maksimalt 255 karakterer.</i></span>
-      </div>
-
-      <div class="form-group">
-      <label for="skjemaBildefil">Velg et bilde:</label>
-      <label class="custom-file">
-        <input type="file" id="file" class="custom-file-input" name="skjemaBildefil" id="skjemaBildefil">
-        <span class="custom-file-control"></span>
-      </label>
-      <span id="lastOppHjelp" class="help-block"><i>Kun GIF, JPEG og PNG-bilder er tillatt for opplasting, <br>maks. 4 megabyte per bilde.</i></span>
-      </div>
-
-      <input type="submit" name="skjemaRegBilde" id="skjemaRegBilde" class="btn btn-success" value="Registrer bilde" alt="Knapp for å registrere det valgte bildet fra skjemaet">
-      <input type="reset" name="skjemaResetKnapp" id="skjemaResetKnapp" class="btn btn-warning" value="Nullstill skjema">
+      <input type="submit" name="skjemaregfakultet" id="skjemaRegFakultet" class="btn btn-success" value="Registrer fakultet" alt="Knapp for reg fakultet">
+      <input type="reset" name="skjemaNullstill" id="skjemaNullstill" class="btn btn-warning" value="Nullstill skjema">
     </form>
 </div>
