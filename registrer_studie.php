@@ -1,3 +1,7 @@
 <?php
-print("Reg ny studieretning: for eks master i informasjonssystemer");
+include('html/reg_studie.html');
+if ($_POST["skjemaregstudie"]) {
+  
+  print("Studeretning ved navn ")
+}
 ?>

@@ -22,5 +22,4 @@ if ($dbLink->connect_error) {
 }
 
 $dbLink->set_charset("utf8");
-
 ?>

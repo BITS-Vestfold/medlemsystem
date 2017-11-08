@@ -21,9 +21,10 @@ if (isset($_GET["funksjon"])) {
 
     case "registrer_studie":
     include("registrer_studie.php");
+    break;
     
     case "registrer_fakultet":
-    include("reg_fakultetvalg.php");
+    include("registrer_fakultet.php");
     break;
 
     case "vis_alle_medlemmer":
