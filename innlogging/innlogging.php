@@ -70,11 +70,11 @@ if (isset($_POST["sendLogin"])) {
 
   session_start();
 
-  $brukerFraSkjema = htmlspecialchars($dbLink->real_escape_string($_POST["brukernavn"]));
-  $passordFraSkjema = htmlspecialchars($dbLink->real_escape_string($_POST["passord"]));
+  $brukerFraSkjema = trim(htmlspecialchars($dbLink->real_escape_string($_POST["brukernavn"])));
+  // Fremtidig funksjonalitet som snart er ferdig, skrive en valideringsklasse og bruke noe ala:
+  // $brukerFraSkjema = $InndataValidator->saniter("$_POST["brukernavn"]");
 
-  trim($brukerFraSkjema);
-  trim($passordFraSkjema);
+  $passordFraSkjema = trim(htmlspecialchars($dbLink->real_escape_string($_POST["passord"])));
 
   sjekkLogin($brukerFraSkjema, $passordFraSkjema, $dbLink);
 }
