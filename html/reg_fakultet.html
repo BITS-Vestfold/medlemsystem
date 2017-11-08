@@ -1,0 +1,29 @@
+<div class="row">
+
+    <form class="well" id="regFakultetSkjema" name="regfakultetskjema" method="post">
+
+      <div class="form-group">
+        <label for="skjemaBildenummer">Skriv inn navn på nytt fakultet</label>
+        <input type="text" class="form-control" name="skjemaBildenummer" id="skjemaBildenummer" placeholder="Eksempel: '505'" class="form-control">
+        <span id="bildeNrHjelp" class="help-block"><i>Bildenummeret må være konstruert av tre siffer, for eks 128 og 512.</i></span>
+      </div>
+
+      <div class="form-group">
+        <label for="skjemaBildeBeskrivelse">Beskrivelse:</label>
+        <input type="text" class="form-control" id="skjemaBildeBeskrivelse" name="skjemaBildeBeskrivelse" placeholder="En kort beskrivelse av bildet.">
+        <span id="bildeBeskrivHjelp" class="help-block"><i>Maksimalt 255 karakterer.</i></span>
+      </div>
+
+      <div class="form-group">
+      <label for="skjemaBildefil">Velg et bilde:</label>
+      <label class="custom-file">
+        <input type="file" id="file" class="custom-file-input" name="skjemaBildefil" id="skjemaBildefil">
+        <span class="custom-file-control"></span>
+      </label>
+      <span id="lastOppHjelp" class="help-block"><i>Kun GIF, JPEG og PNG-bilder er tillatt for opplasting, <br>maks. 4 megabyte per bilde.</i></span>
+      </div>
+
+      <input type="submit" name="skjemaRegBilde" id="skjemaRegBilde" class="btn btn-success" value="Registrer bilde" alt="Knapp for å registrere det valgte bildet fra skjemaet">
+      <input type="reset" name="skjemaResetKnapp" id="skjemaResetKnapp" class="btn btn-warning" value="Nullstill skjema">
+    </form>
+</div>
