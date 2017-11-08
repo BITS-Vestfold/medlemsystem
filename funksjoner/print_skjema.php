@@ -26,7 +26,7 @@ echo <<<'regskjemaHTML'
     </div>
   </div>
 
-  <label for="epost">Gyldig e-post</label>
+  <label for="epost">E-post (må være gyldig for verifisering)</label>
   <div class="form-group">
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-inbox"></i></span>
@@ -50,6 +50,14 @@ echo <<<'regskjemaHTML'
     </div>
   </div>
 
+  <label for="studie">Studie*</label>
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
+      <input type="text" class="form-control" placeholder="For eks: Bachelor i IT og ledelse" name="regstudie" id="regStudie">
+    </div>
+  </div>
+
   <label for="fakultet">Fakultet*</label>
   <div class="form-group">
     <div class="input-group">
@@ -58,7 +66,7 @@ echo <<<'regskjemaHTML'
     </div>
   </div>
 
-  <label for="aarskull">Årskull</label>
+  <label for="aarskull">Årskull (året du begynte studieretningen)</label>
   <div class="form-group">
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
