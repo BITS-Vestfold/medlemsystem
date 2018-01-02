@@ -5,8 +5,9 @@
   sjekkInnlogget(1);
   
   $sql = "DROP TABLE `admin`;";
-  $sql .= "DROP TABLE `medlem`;";
   $sql .= "DROP TABLE `gruppe`;";
+  $sql .= "DROP TABLE `medlem`;";
+  $sql .= "DROP TABLE 'tilhorighet';";
 
   // Slettingen feiler tidvis, en refresh så fungerer det. Forsøker multiquery for å se om det utgjør en forskjell.
 

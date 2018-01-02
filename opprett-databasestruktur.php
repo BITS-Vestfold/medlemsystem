@@ -1,5 +1,5 @@
 <?php
-include_once('include/dbtilkobling.php');
+include_once('/srv/http/medlemsystem/include/dbtilkobling.php');
 include_once('innlogging/login.php');
 session_start();
 sjekkInnlogget(1);
@@ -31,6 +31,18 @@ if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilme
   die("Kritisk feil: Noe gikk galt ved registrering av tabell og databasen er kun delvis opprettet.\nFeil fra DBMS:" . mysqli_error($dbLink) . "<br>");
 }
 
+$sql = "CREATE TABLE tilhorighet (
+  kullid INT(4) PRIMARY KEY AUTO_INCREMENT,
+  fakultet VARCHAR(32) NOT NULL,
+  aarskull INT(4) NOT NULL
+);";
+
+if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilmeldinger vi måtte få.
+  print("Great success! Tabellen \"tilhorighet\" ble opprettet i databasen.\n<br>");
+} else { // Ev. feilmelding blir skrevet ut. Vanlig feil her er at tabellen allerede eksisterer.
+  die("Kritisk feil: Noe gikk galt ved registrering av tabell og databasen er kun delvis opprettet.\nFeil fra DBMS:" . mysqli_error($dbLink) . "<br>");
+}
+
 $sql = "CREATE TABLE medlem (
   brukerid INT(10) PRIMARY KEY AUTO_INCREMENT,
   fornavn VARCHAR(32) NOT NULL,
@@ -49,7 +61,7 @@ $sql = "CREATE TABLE medlem (
   brukergruppe INT(1),
   sistlogin TIMESTAMP,
   FOREIGN KEY (brukergruppe) REFERENCES gruppe(gruppeid),
-  FOREIGN KEY (kullid) REFERENCES tilhorighet(kullid)
+  FOREIGN KEY (aarskull) REFERENCES tilhorighet(kullid)
 );";
 
 if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilmeldinger vi måtte få.
@@ -58,16 +70,6 @@ if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilme
   die("Kritisk feil: Noe gikk galt ved registrering av tabell og databasen er kun delvis opprettet.\nFeil fra DBMS:" . mysqli_error($dbLink) . "<br>");
 }
 
-$sql = "CREATE TABLE tilhorighet (
-  kullid INT(4) AUTO_INCREMENT PRIMARY KEY,
-  fakultet VARCHAR(32) NOT NULL,
-  aarskull INT(4) NOT NULL
-);";
 
-if ($dbLink->query($sql)) { // Vi utfører spørringen, og skriver ut ev. feilmeldinger vi måtte få.
-  print("Great success! Tabellen \"tilhorighet\" ble opprettet i databasen.\n<br>");
-} else { // Ev. feilmelding blir skrevet ut. Vanlig feil her er at tabellen allerede eksisterer.
-  die("Kritisk feil: Noe gikk galt ved registrering av tabell og databasen er kun delvis opprettet.\nFeil fra DBMS:" . mysqli_error($dbLink) . "<br>");
-}
 
 ?>
