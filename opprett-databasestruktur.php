@@ -1,8 +1,8 @@
 <?php
-include_once('/srv/http/medlemsystem/include/dbtilkobling.php');
-include_once('innlogging/login.php');
-session_start();
-sjekkInnlogget(1);
+include_once('include/dbtilkobling.php');
+//include_once('innlogging/login.php');
+//session_start();
+//sjekkInnlogget(1);
 
 $sql = "CREATE TABLE admin (
   adminid INT(3) PRIMARY KEY AUTO_INCREMENT,

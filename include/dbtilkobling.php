@@ -1,6 +1,7 @@
 <?php
-include_once('../innlogging/login.php');
-sjekkInnlogget(1);
+//include_once('../innlogging/login.php');
+//sjekkInnlogget(1);
+
 
 // [BYTT LOGIN-INFO VED FLYTTING]
 // Tilpasset mildertidig utviklings-VPS
