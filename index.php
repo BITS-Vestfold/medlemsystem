@@ -1,6 +1,7 @@
 <?php
 session_start();
-include_once('dbtilkobling.php'); // Fil som har informasjon om, og oppretter kobling til, databasen.
+include_once('include/dbtilkobling.php'); // Fil som har informasjon om, og oppretter kobling til, databasen.
+
 
 // session_start();
 // Plass for å inkludere filer som trengs for loginfunksjoner mm.

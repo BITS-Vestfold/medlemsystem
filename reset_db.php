@@ -1,16 +1,17 @@
 <?php
   include_once('include/dbtilkobling.php');
-  include_once('innlogging/login.php');
+//  include_once('innlogging/login.php');
   session_start();
-  sjekkInnlogget(1);
-  
-  $sql = "DROP TABLE `admin`;";
-  $sql .= "DROP TABLE `medlem`;";
-  $sql .= "DROP TABLE `gruppe`;";
+//  sjekkInnlogget(1);
 
-  // Slettingen feiler tidvis, en refresh så fungerer det. Forsøker multiquery for å se om det utgjør en forskjell.
+//  $sql = "SET foreign_key_checks = 0;";
+  $sql = "DROP TABLE admin,gruppe,medlem,tilhorighet;";
+//  $sql .= "DROP TABLE medlem;";
+//  $sql .= "DROP TABLE tilhorighet;";
 
-  $dbLink->multi_query($sql); // Alt databaseinnhold relatert til systemet skal nå være slettet
+  // Slettingen feiler tidvis, men mer stabilt enn multi_query.
+
+  $dbLink->query($sql); // Alt databaseinnhold relatert til systemet skal nå være slettet
 
   include 'opprett-databasestruktur.php';   // Oppretter alle tabeller og felter
   $naatid = time();
